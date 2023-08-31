@@ -111,7 +111,7 @@ FROM bluefin AS bluefin-framework
 
 COPY framework/usr /usr
 
-RUN rpm-ostree install tlp tlp-rdw stress-ng
+RUN rpm-ostree install tlp tlp-rdw stress-ng memtester
 RUN rpm-ostree override remove power-profiles-daemon
 RUN systemctl enable tlp
 RUN systemctl enable fprintd.service
